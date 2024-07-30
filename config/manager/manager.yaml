@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: controller-manager
-  namespace: system
+  namespace: trustyai-operator-system
   labels:
     control-plane: controller-manager
     app.kubernetes.io/name: deployment
@@ -54,12 +54,12 @@ spec:
               port: 8081
             initialDelaySeconds: 5
             periodSeconds: 10
-          resources:
-            limits:
-              cpu: 500m
-              memory: 128Mi
-            requests:
-              cpu: 10m
-              memory: 64Mi
+#          resources:
+#            limits:
+#              cpu: 500m
+#              memory: 128Mi
+#            requests:
+#              cpu: 10m
+#              memory: 64Mi
       serviceAccountName: controller-manager
       terminationGracePeriodSeconds: 10
