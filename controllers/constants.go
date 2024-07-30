@@ -9,10 +9,19 @@ const (
 	serviceMonitorName   = "trustyai-metrics"
 	finalizerName        = "trustyai.opendatahub.io/finalizer"
 	payloadProcessorName = "MM_PAYLOAD_PROCESSORS"
+	tlsKeyCertPathName   = "MM_TLS_KEY_CERT_PATH"
+	mmContainerName      = "mm"
 	modelMeshLabelKey    = "modelmesh-service"
 	modelMeshLabelValue  = "modelmesh-serving"
 	volumeMountName      = "volume"
-	defaultRequeueDelay  = 10 * time.Second
+	defaultRequeueDelay  = 30 * time.Second
+	dbCredentialsSuffix  = "-db-credentials"
+)
+
+// Allowed storage formats
+const (
+	STORAGE_PVC      = "PVC"
+	STORAGE_DATABASE = "DATABASE"
 )
 
 // Configuration constants
@@ -56,3 +65,5 @@ const (
 	EventReasonInferenceServiceConfigured = "InferenceServiceConfigured"
 	EventReasonServiceMonitorCreated      = "ServiceMonitorCreated"
 )
+
+const migrationAnnotationKey = "trustyai.opendatahub.io/db-migration"
