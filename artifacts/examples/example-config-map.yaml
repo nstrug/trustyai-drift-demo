@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: trustyai-service-operator-config
-data:
-  trustyaiServiceImage: "quay.io/trustyai/trustyai-service:latest"
