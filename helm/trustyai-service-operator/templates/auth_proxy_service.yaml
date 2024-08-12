@@ -7,8 +7,8 @@ metadata:
     app.kubernetes.io/instance: controller-manager-metrics-service
     app.kubernetes.io/component: kube-rbac-proxy
     app.kubernetes.io/created-by: trustyai-service-operator
-    app.kubernetes.io/part-of: trustyai-service-operator
-  name: controller-manager-metrics-service
+    app.kubernetes.io/part-of: trustyai
+  name: trustyai-service-operator-controller-manager-metrics-service
   namespace: {{ .Release.Namespace }}
 spec:
   ports:

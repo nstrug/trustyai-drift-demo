@@ -6,13 +6,13 @@ metadata:
     app.kubernetes.io/instance: leader-election-rolebinding
     app.kubernetes.io/component: rbac
     app.kubernetes.io/created-by: trustyai-service-operator
-    app.kubernetes.io/part-of: trustyai-service-operator
-  name: leader-election-rolebinding
+    app.kubernetes.io/part-of: trustyai
+  name: trustyai-service-operator-leader-election-rolebinding
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: leader-election-role
+  name: trustyai-service-operator-leader-election-role
 subjects:
   - kind: ServiceAccount
-    name: controller-manager
+    name: trustyai-service-operator-controller-manager
     namespace: {{ .Release.Namespace }}

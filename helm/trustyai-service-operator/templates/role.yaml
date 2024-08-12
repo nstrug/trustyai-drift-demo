@@ -3,7 +3,9 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   creationTimestamp: null
-  name: manager-role
+  labels:
+    app.kubernetes.io/part-of: trustyai
+  name: trustyai-service-operator-manager-role
 rules:
 - apiGroups:
   - ""

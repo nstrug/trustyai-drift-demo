@@ -6,10 +6,10 @@ metadata:
     app.kubernetes.io/instance: trustyaiservice-editor-role
     app.kubernetes.io/component: rbac
     app.kubernetes.io/created-by: trustyai-service-operator
-    app.kubernetes.io/part-of: trustyai-service-operator
+    app.kubernetes.io/part-of: trustyai
     rbac.authorization.k8s.io/aggregate-to-edit: "true"
     rbac.authorization.k8s.io/aggregate-to-admin: "true"
-  name: trustyaiservice-editor-role
+  name: trustyai-service-operator-trustyaiservice-editor-role
 rules:
   - apiGroups:
       - trustyai.opendatahub.io

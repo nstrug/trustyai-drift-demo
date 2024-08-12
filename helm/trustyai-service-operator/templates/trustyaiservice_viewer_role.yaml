@@ -7,10 +7,10 @@ metadata:
     app.kubernetes.io/instance: trustyaiservice-viewer-role
     app.kubernetes.io/component: rbac
     app.kubernetes.io/created-by: trustyai-service-operator
-    app.kubernetes.io/part-of: trustyai-service-operator
+    app.kubernetes.io/part-of: trustyai
     rbac.authorization.k8s.io/aggregate-to-view: "true"
     rbac.authorization.k8s.io/aggregate-to-admin: "true"
-  name: trustyaiservice-viewer-role
+  name: trustyai-service-operator-trustyaiservice-viewer-role
 rules:
   - apiGroups:
       - trustyai.opendatahub.io
