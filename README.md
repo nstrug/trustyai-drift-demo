@@ -11,9 +11,9 @@ To install the TrustyAI Service into a datascience project:
 
 `helm install --namespace my-datascience-project trustyai-service helm/trustyai-service`
 
-# Demo Installation
+## Demo Installation
 
-## Install Minio
+### Install Minio
 
 We will use Minio as an object store to store models and data.
 
