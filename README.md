@@ -1,7 +1,7 @@
 
 # TrustyAI Model Drift Demo
 
-## TrustyAI Operator Helm Installation
+## TrustyAI Operator Installation
 
 To install the TrustyAI Operator using helm:
 
@@ -35,7 +35,7 @@ Verify that you can login to the Minio UI at http://127.0.0.1:9001/minio
 
 Create a bucket called 'my-datascience-project'
 
-## Setup the Demo environment
+### Setup the Demo Environment
 
 In your datascience project, add your newly created Minio bucket as a Data Connection as follows:
 * Name: minio
