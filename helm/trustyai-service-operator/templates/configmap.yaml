@@ -3,8 +3,8 @@ apiVersion: v1
 data:
   kServeServerless: disabled
   oauthProxyImage: quay.io/openshift/origin-oauth-proxy:4.14.0
-  trustyaiOperatorImage: quay.io/trustyai/trustyai-service-operator:latest
-  trustyaiServiceImage: quay.io/trustyai/trustyai-service:latest
+  trustyaiOperatorImage: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+  trustyaiServiceImage: "{{ .Values.service_image.repository }}:{{ .Values.service_image.tag }}"
 kind: ConfigMap
 metadata:
   labels:

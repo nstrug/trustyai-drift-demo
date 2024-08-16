@@ -4,5 +4,3 @@
 
 replicaCount: 1
 
-image:
-  repository: quay.io/trustyai/trustyai-service

@@ -129,25 +129,6 @@ curl -k -H "Authorization: Bearer ${TOKEN}" -X POST --location $TRUSTY_ROUTE/met
       }"
 ```
 
-curl -k -H "Authorization: Bearer ${TOKEN}" -X DELETE --location $TRUSTY_ROUTE/metrics/drift/meanshift/request -H "Content-Type: application/json" \
-  -d "{
-        \"modelId\": \"gaussian-credit-model\",
-        \"referenceTag\": \"TRAINING\"
-      }"
-
-curl -k -H "Authorization: Bearer ${TOKEN}" -X GET --location $TRUSTY_ROUTE/metrics/drift/meanshift/requests -H "Content-Type: application/json" 
-
-curl -k -H "Authorization: Bearer ${TOKEN}" -X DELETE --location $TRUSTY_ROUTE/metrics/drift/meanshift/request -H "Content-Type: application/json" \
-  -d "{
-        \"requestId\": \"a3514518-aa93-4b7a-b304-36f1c69d8d6d\"
-      }"
-
-curl -k -H "Authorization: Bearer ${TOKEN}" -X DELETE --location $TRUSTY_ROUTE/metrics/drift/meanshift/request -H "Content-Type: application/json" \
-  -d "{
-        \"requestId\": \"e3db2c52-3841-4261-a545-e28a5832346c\"
-      }"
-
-
 We are now ready to run inference with our model and observe drift!
 
 ### Observing Drift
@@ -166,6 +147,9 @@ for batch in {0..595..5}; do
   sleep 1
 done
 ```
+
+You can now pick up the original demo instructions from here: https://github.com/trustyai-explainability/odh-trustyai-demos/blob/main/3-DataDrift/README.md#check-the-metrics
+
 
 
 

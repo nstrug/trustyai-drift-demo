@@ -5,3 +5,7 @@
 image:
   repository: quay.io/trustyai/trustyai-service-operator
 
+service_image:
+  repository:  quay.io/trustyai/trustyai-service 
+  tag: v0.17.0
+
